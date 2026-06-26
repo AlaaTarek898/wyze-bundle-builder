@@ -9,7 +9,7 @@ A responsive multi-step bundle builder built with React. The application allows 
 > Add your deployed application link here.
 
 ```
-https://wyze-bundle-builder-eta.vercel.app/
+[https://your-demo-url.com](https://wyze-bundle-builder-eta.vercel.app/)
 ```
 
 ---
@@ -19,7 +19,7 @@ https://wyze-bundle-builder-eta.vercel.app/
 > Add your GitHub repository link here.
 
 ```
-https://github.com/AlaaTarek898/wyze-bundle-builder.git
+[https://github.com/your-username/bundle-builder](https://github.com/AlaaTarek898/wyze-bundle-builder.git)
 ```
 
 ---
