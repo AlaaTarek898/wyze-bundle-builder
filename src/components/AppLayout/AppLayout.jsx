@@ -10,8 +10,8 @@ export default function AppLayout({ products }) {
     flex-col
     lg:grid
     lg:grid-cols-[2fr_1fr]
-    2xl:flex
-    2xl:flex-col
+    xl:flex
+    xl:flex-col
     gap-6
 "
     >

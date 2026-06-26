@@ -23,7 +23,7 @@ export default function BuilderStep({
     <div className="bg-[#EDF4FF] rounded-2xl p-4 p-md-6 flex flex-col gap-6">
       {/* Step Number */}
 
-      <p className="text-[#484848] font-gilroy-medium text-2xl">
+      <p className="text-[#484848] font-gilroy-medium text-2xl  xl:text-xl">
         Step {step} of 4
       </p>
 
@@ -41,7 +41,7 @@ export default function BuilderStep({
         >
           <img src={stepIcon} alt="step" />
 
-          <p className="text-lg md-text-2xl xl:text-3xl font-gilroy">
+          <p className="text-lg md-text-2xl xl:text-xl font-gilroy">
             {title}
           </p>
         </button>
@@ -50,7 +50,7 @@ export default function BuilderStep({
           onClick={() =>
             setOpenStep(isOpen ? 0 : step)
           }
-          className="flex text-sm text-md-xl xl:text-2xl font-gilroy items-center gap-2 text-[#4E2FD2]"
+          className="flex text-sm text-md-xl  xl:text-xl font-gilroy items-center gap-2 text-[#4E2FD2]"
         >
           <span>{selectedCount} selected</span>
 

@@ -74,7 +74,7 @@ const {
     <section className="bg-[#EDF4FF] rounded-2xl p-4 flex flex-col gap-6">
       {/* Header */}
 
-      <p className="text-[#484848] uppercase text-sm *:text-xl xl:text-2xl font-gilroy-medium">
+      <p className="text-[#484848] uppercase text-sm *:text-xl xl:text-xl font-gilroy-medium">
         Review
       </p>
 
@@ -82,7 +82,7 @@ const {
         Your security system
       </h2>
 
-      <p className="text-[#1F1F1FBF] text-sm *:text-xl xl:text-2xl">
+      <p className="text-[#1F1F1FBF] text-sm *:text-xl xl:text-xl">
         Review your personalized protection system designed to keep what matters
         most safe.
       </p>

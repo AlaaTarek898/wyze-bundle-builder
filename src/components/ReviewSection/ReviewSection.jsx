@@ -36,7 +36,7 @@ export default function ReviewSection({ title, items, section }) {
                   className="text-[#1F1F1F] text-sm
 md:text-xl
 lg:text-2xl
-xl:text-3xl
+xl:text-xl
 2xl:text-3xl font-gilroy"
                 >
                   {item.name}
@@ -85,11 +85,11 @@ xl:text-3xl
               {/* Price */}
 
               <div className="text-right">
-                <p className="text-[#6F7882] text-sm md:text-xl xl:text-2xl line-through">
+                <p className="text-[#6F7882] text-sm md:text-xlsaleP xl:text-xlrice line-through">
                   ${totalOriginalPrice.toFixed(2)}
                 </p>
 
-                <p className="text-[#4E2FD2] text-sm md:text-xl xl:text-2xl font-semibold">
+                <p className="text-[#4E2FD2] text-sm md:text-xlsaleP xl:text-xlrice font-semibold">
                   {item.salePrice === 0
                     ? "FREE"
                     : `$${totalSalePrice.toFixed(2)}`}

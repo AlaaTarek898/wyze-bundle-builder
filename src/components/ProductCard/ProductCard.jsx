@@ -24,10 +24,11 @@ function ProductCard({ product, currentSection }) {
   return (
     <div
       className={`rounded-2xl p-6 md:flex-row
-xl:flex-col items-start gap-4 border-2 transition-all duration-300 ${quantity > 0
+xl:flex-col items-start gap-4 border-2 transition-all duration-300 ${
+        quantity > 0
           ? "bg-[#F8F6FF] border-[#4E2FD2]"
           : "bg-white border-transparent"
-        }`}
+      }`}
     >
       {/* Left */}
 
@@ -53,12 +54,12 @@ xl:flex-col items-start gap-4 border-2 transition-all duration-300 ${quantity > 
       {/* Right */}
 
       <div className="flex-1">
-        <h3 className="text-xl md-text-3xl xl:text-3xl font-gilroy text-[#1F1F1F] mb-2">
+        <h3 className="text-xl md-text-3xl xl:text-xl font-gilroy text-[#1F1F1F] mb-2">
           {product.name}
         </h3>
 
         {product.description && (
-          <p className="text-[#575757] text-sm md:text-xl xl:text-2xl mb-4">
+          <p className="text-[#575757] text-sm md:text-xl xl:text-lg mb-4">
             {product.description}
 
             <a href="#" className="ml-1 text-[#4E2FD2] underline">
@@ -80,10 +81,11 @@ xl:flex-col items-start gap-4 border-2 transition-all duration-300 ${quantity > 
                     [product.id]: variant.id,
                   }))
                 }
-                className={`flex items-center text-sm text-md-2xl gap-2 p-2 rounded-lg border-2 transition-all duration-200 ${selectedVariants[product.id] === variant.id
+                className={`flex items-center text-sm text-md-2xl gap-2 p-2 rounded-lg border-2 transition-all duration-200 ${
+                  selectedVariants[product.id] === variant.id
                     ? "border-[#4E2FD2] bg-[#F4F0FF]"
                     : "border-gray-300"
-                  }`}
+                }`}
               >
                 {variant.image && (
                   <img
