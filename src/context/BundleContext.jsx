@@ -116,75 +116,72 @@ export function BundleProvider({ children }) {
 
   // Calculations
   // =========================
+const calculateTotal = () => {
+  let total = 0;
 
-  const calculateTotal = () => {
-    let total = 0;
+  const sections = [
+    { key: "cameras", products: products.cameras },
+    { key: "plans", products: products.plans },
+    { key: "sensors", products: products.sensors },
+    { key: "accessories", products: products.accessories },
+  ];
 
-    products.cameras.forEach((camera) => {
-      if (camera.variants.length) {
-        const variants =
-          bundle.cameras?.[camera.id] || {};
+  sections.forEach(({ key, products: sectionProducts }) => {
+    sectionProducts.forEach((item) => {
+      if (item.variants?.length) {
+        const variants = bundle[key]?.[item.id] || {};
 
-        Object.values(variants).forEach(
-          (quantity) => {
-            total +=
-              (camera.salePrice ??
-                camera.originalPrice) *
-              quantity;
-          }
-        );
+        Object.values(variants).forEach((quantity) => {
+          total +=
+            (item.salePrice ?? item.originalPrice) * quantity;
+        });
       } else {
         total +=
-          (camera.salePrice ??
-            camera.originalPrice) *
-          (bundle.cameras?.[camera.id] || 0);
+          (item.salePrice ?? item.originalPrice) *
+          (bundle[key]?.[item.id] || 0);
       }
     });
+  });
 
-    return total;
-  };
+  return total;
+};
 
-  const calculateOriginalTotal = () => {
-    let total = 0;
+ const calculateOriginalTotal = () => {
+  let total = 0;
 
-    products.cameras.forEach((camera) => {
-      if (camera.variants.length) {
-        const variants =
-          bundle.cameras?.[camera.id] || {};
+  const sections = [
+    { key: "cameras", products: products.cameras },
+    { key: "plans", products: products.plans },
+    { key: "sensors", products: products.sensors },
+    { key: "accessories", products: products.accessories },
+  ];
 
-        Object.values(variants).forEach(
-          (quantity) => {
-            total +=
-              camera.originalPrice * quantity;
-          }
-        );
+  sections.forEach(({ key, products: sectionProducts }) => {
+    sectionProducts.forEach((item) => {
+      if (item.variants?.length) {
+        const variants = bundle[key]?.[item.id] || {};
+
+        Object.values(variants).forEach((quantity) => {
+          total += item.originalPrice * quantity;
+        });
       } else {
         total +=
-          camera.originalPrice *
-          (bundle.cameras?.[camera.id] || 0);
+          item.originalPrice *
+          (bundle[key]?.[item.id] || 0);
       }
     });
+  });
 
-    products.plans.forEach((plan) => {
-      total += plan.originalPrice;
-    });
-
-    products.sensors.forEach((sensor) => {
-      total += sensor.originalPrice;
-    });
-
-    products.accessories.forEach(
-      (accessory) => {
-        total += accessory.originalPrice;
-      }
-    );
-
-    return total;
-  };
+  return total;
+};
 
   const calculateSavings = () =>
     calculateOriginalTotal() -
     calculateTotal();
+
+
+
+
 
   const getSelectedCount = (section) => {
     const data = bundle[section];
@@ -252,7 +249,11 @@ const saveConfiguration = () => {
     openStep,
   ]
 );
-
+console.log({
+  total: calculateTotal(),
+  original: calculateOriginalTotal(),
+  savings: calculateSavings(),
+});
   return (
     <BundleContext.Provider value={value}>
       {children}

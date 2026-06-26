@@ -135,18 +135,19 @@ xl:flex-col items-start gap-4 border-2 transition-all duration-300 ${
               +
             </button>
           </div>
+<div className="flex flex-col items-end">
+  {product.salePrice !== null && (
+    <span className="line-through text-[#D8392B]">
+      ${product.originalPrice.toFixed(2)}
+    </span>
+  )}
 
-          <div className="flex flex-col items-end">
-            {product.salePrice && (
-              <span className="line-through text-[#D8392B]">
-                ${product.originalPrice}
-              </span>
-            )}
-
-            <span className="text-2xl font-bold text-[#575757]">
-              ${displayPrice}
-            </span>
-          </div>
+  <span className="text-2xl font-bold text-[#575757]">
+    {displayPrice === 0
+      ? "FREE"
+      : `$${displayPrice.toFixed(2)}`}
+  </span>
+</div>
         </div>
       </div>
     </div>
