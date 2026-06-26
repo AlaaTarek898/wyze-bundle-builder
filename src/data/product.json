@@ -1,0 +1,250 @@
+{
+  "initialSelections": {
+    "cameras": {
+      "cam-v4": {
+        "white": 1,
+        "grey": 0,
+        "black": 0
+      },
+
+      "cam-pan-v3": {
+        "white": 1,
+        "black": 0
+      },
+
+      "cam-floodlight-v2": {
+        "white": 0,
+        "black": 0
+      },
+
+      "cam-doorbell": 0,
+
+      "cam-battery-pro": {
+        "white": 0,
+        "black": 0
+      }
+    },
+
+    "plans": {
+      "cam-unlimited": 1
+    },
+
+    "sensors": {
+      "motion-sensor": 1,
+
+      "sense-hub": 1
+    },
+
+    "accessories": {
+      "micro-sd": 1
+    }
+  },
+
+  "cameras": [
+    {
+      "id": "cam-v4",
+      "name": "Wyze Cam v4",
+      "description": "The clearest Wyze Cam ever made.",
+      "image": "/images/camera1.png",
+      "originalPrice": 35.98,
+      "salePrice": 27.98,
+      "badge": "Save 22%",
+
+      "variants": [
+        {
+          "id": "white",
+          "name": "White",
+          "image": "/images/Wyze Cam v4-white.png"
+        },
+
+        {
+          "id": "grey",
+          "name": "Grey",
+          "image": "/images/Wyze Cam v4-white.png"
+        },
+
+        {
+          "id": "black",
+          "name": "Black",
+          "image": "/images/Wyze Cam v4-white.png"
+        }
+      ]
+    },
+
+    {
+      "id": "cam-pan-v3",
+
+      "name": "Wyze Cam Pan v3",
+
+      "description": "360° pan and 180° tilt security camera.",
+
+      "image": "/images/camera2.png",
+
+      "originalPrice": 39.98,
+
+      "salePrice": 34.98,
+
+      "badge": "Save 12%",
+
+      "variants": [
+        {
+          "id": "white",
+
+          "name": "White",
+
+          "image": "/images/camera2_white.png"
+        },
+
+        {
+          "id": "black",
+
+          "name": "Black",
+
+          "image": "/images/camera2_black.png"
+        }
+      ]
+    },
+
+    {
+      "id": "cam-floodlight-v2",
+
+      "name": "Wyze Cam Floodlight v2",
+
+      "description": "2K floodlight camera with a 160° wide-angle view for your garage.",
+
+      "image": "/images/camera3.png",
+
+      "originalPrice": 89.98,
+
+      "salePrice": 69.98,
+
+      "badge": "Save 22%",
+
+      "variants": [
+        {
+          "id": "white",
+
+          "name": "White",
+
+          "image": "/images/camera3_white.png"
+        },
+
+        {
+          "id": "black",
+
+          "name": "Black",
+
+          "image": "/images/camera3_black.png"
+        }
+      ]
+    },
+
+    {
+      "id": "cam-doorbell",
+
+      "name": "Wyze Duo Cam Doorbell",
+
+      "description": "Two cameras. Two views. Double the porch protection.",
+
+      "image": "/images/camera4.png",
+
+      "originalPrice": 69.98,
+
+      "salePrice": null,
+
+      "badge": null,
+
+      "variants": []
+    },
+
+    {
+      "id": "cam-battery-pro",
+
+      "name": "Wyze Battery Cam Pro",
+
+      "description": "Protect anywhere. See everything in 2.5K HDR. No power outlet or electrician needed.",
+
+      "image": "/images/camera5.png",
+
+      "originalPrice": 89.98,
+
+      "salePrice": null,
+
+      "badge": null,
+
+      "variants": [
+        {
+          "id": "white",
+
+          "name": "White",
+
+          "image": "/images/camera5_white.png"
+        },
+
+        {
+          "id": "black",
+
+          "name": "Black",
+
+          "image": "/images/camera5_black.png"
+        }
+      ]
+    }
+  ],
+
+  "plans": [
+    {
+      "id": "cam-unlimited",
+
+      "name": "Cam Unlimited",
+
+      "image": "/images/plan.png",
+
+      "originalPrice": 12.99,
+
+      "salePrice": 9.99
+    }
+  ],
+
+  "sensors": [
+    {
+      "id": "motion-sensor",
+
+      "name": "Wyze Sense Motion Sensor",
+
+      "image": "/images/sensor1.png",
+
+      "originalPrice": 59.98,
+
+      "salePrice": 59.98
+    },
+
+    {
+      "id": "sense-hub",
+
+      "name": "Wyze Sense Hub",
+
+      "image": "/images/sensor2.png",
+
+      "required": true,
+
+      "originalPrice": 29.92,
+
+      "salePrice": 0
+    }
+  ],
+
+  "accessories": [
+    {
+      "id": "micro-sd",
+
+      "name": "Wyze MicroSD Card (256GB)",
+
+      "image": "/images/acc.png",
+
+      "originalPrice": 41.96,
+
+      "salePrice": 41.96
+    }
+  ]
+}
